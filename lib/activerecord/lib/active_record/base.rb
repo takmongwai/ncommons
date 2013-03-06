@@ -1,3 +1,4 @@
+require 'active_record'
 class ActiveRecord::Base
 
   #新建或更新已有记录
