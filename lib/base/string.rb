@@ -24,6 +24,13 @@ class String
   def camelize
     return self.gsub(/\/(.?)/) { "::" + $1.upcase }.gsub(/(^|_)(.)/) { $2.upcase }
   end
+  
+  def uncamelize
+    w = self.dup
+    w.gsub!(/::/,'/')
+    w.scan(/([A-Z])/){ w = w.gsub($1,"_"+$1.downcase)}
+    return w
+  end
 
   #去除前后空格的方法别名
   def trim
