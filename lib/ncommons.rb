@@ -4,6 +4,7 @@ require 'ncommons/version'
 #require 'active_record'
 %w(
   base/string.rb
+  base/hash.rb
   base/file.rb
   base/numeric.rb
   base/base62.rb
