@@ -29,8 +29,10 @@ class String
     w = self.dup
     w.gsub!(/::/,'/')
     w.scan(/([A-Z])/){ w = w.gsub($1,"_"+$1.downcase)}
+    w.gsub!(/^\_/,'')
     return w
   end
+  
 
   #去除前后空格的方法别名
   def trim
